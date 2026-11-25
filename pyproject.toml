@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sphyrex-vox-skill"
+version = "0.1.0"
+description = "Reusable Hybrid Vox x Engraving editorial video rendering engine (9:16 & 16:9)"
+readme = "SKILL.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
+dependencies = [
+    "pillow>=9.5.0",
+    "numpy>=1.23.0",
+]
+
+[project.scripts]
+vox-kit = "vox_kit.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["vox_kit*"]
