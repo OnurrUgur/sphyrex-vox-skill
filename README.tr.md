@@ -1,8 +1,19 @@
 # sphyrex-vox-skill
 
+[![Lisans: MIT](https://img.shields.io/badge/Lisans-MIT-2F8F6B.svg)](LICENSE)
+[![Python 3.9+](https://img.shields.io/badge/Python-3.9%2B-1A191D.svg)](#gereksinimler)
+[![API Maliyeti: $0](https://img.shields.io/badge/API%20Maliyeti-%240-EBBA2C.svg)](#neden-hibrit-75-kod--25-opsiyonel-ai)
+[![Ajanlar: Claude · Codex · Antigravity](https://img.shields.io/badge/Ajanlar-Claude%20%C2%B7%20Codex%20%C2%B7%20Antigravity-D02E2A.svg)](#adım-2--skilli-ajanınıza-bağlayın)
+
 **Vox tarzı editoryal kâğıt kolajı ve gravür haritalı mini-belgeseller (9:16 Shorts/Reels ve 16:9 YouTube) üreten açık kaynak Ajan Skill'i (Claude Code · OpenAI Codex · Google Antigravity) ve deterministik Python motoru (`vox_kit`).**
 
-[English README →](README.md) · [Skill Kuralları (`SKILL.md`)](SKILL.md) · [Ajan Yönergesi (`AGENTS.md`)](AGENTS.md)
+[Detaylı Türkçe Rehber (xsphyrex.com) →](https://xsphyrex.com/tr/rehberler/vox-belgesel-skill) · [English Guide](https://xsphyrex.com/en/guides/vox-documentary-skill) · [English README](README.md) · [Skill Kuralları (`SKILL.md`)](SKILL.md) · [Ajan Yönergesi (`AGENTS.md`)](AGENTS.md)
+
+<p align="center">
+  <img src="assets/demo-preview.gif" alt="sphyrex-vox-skill 24 FPS Python mini-belgesel demosu" width="720" />
+  <br />
+  <em><code>vox_kit</code> ile %100 deterministik Python çıktısı — Natural Earth 1:50m gravür harita, yırtık kâğıt, kırmızı mühür, kırılım grafiği, siyah perde ve -14 LUFS ses. $0 API maliyeti, After Effects yok.</em>
+</p>
 
 > **Sorumluluk Reddi:** Bu yazılım herhangi bir garanti olmaksızın "olduğu gibi" sunulur. Videolarda kullandığınız veri ve rakamların doğruluğu, eklediğiniz üçüncü taraf medyaların telif/lisans uygunluğu ve platform kurallarına uyum tamamen kullanıcının sorumluluğundadır. Sphyrex herhangi bir sunucu/bulut hizmeti sağlamaz ve kullanıcı verisi toplamaz. "Sphyrex" marka adı ve maskot görselleri MIT lisansı kapsamı dışındadır.
 
@@ -47,7 +58,16 @@ python3 -m unittest discover -s tests -v
 
 ## Adım 2 · Skill'i Ajanınıza Bağlayın
 
-`sphyrex-vox-skill`, standart `SKILL.md` + `AGENTS.md` yapısıyla **Claude Code**, **OpenAI Codex CLI** ve **Google Antigravity** ile doğrudan uyumludur. Klonladığınız `sphyrex-vox-skill` klasörünün içinde kullandığınız araca göre ilgili komutu çalıştırın:
+`sphyrex-vox-skill`, standart `SKILL.md` + `AGENTS.md` yapısıyla **Claude Code**, **OpenAI Codex CLI** ve **Google Antigravity** ile doğrudan uyumludur.
+
+### Tek Komutla Kurulum (`skills.sh` CLI — Tüm Ajanlar)
+```bash
+npx skills add OnurrUgur/sphyrex-vox-skill
+```
+*(Skill tanımını ekledikten sonra `python3 -m vox_kit` motoru için Adım 1'deki `pip install -e .` kurulumunu da çalıştırın.)*
+
+### Veya Klonladığınız Klasörden Elle Bağlayın
+Klonladığınız `sphyrex-vox-skill` klasörünün içinde kullandığınız araca göre ilgili komutu çalıştırın:
 
 ### Claude Code
 ```bash
@@ -104,6 +124,12 @@ python3 -m vox_kit init ./benim-belgeselim
 - **Yerel çalışma:** Telemetri ve zorunlu API anahtarı olmadan kendi bilgisayarınızda çevrimdışı çalışacak şekilde tasarlanmıştır.
 - **Yalnız güvendiğiniz sahne dosyalarını çalıştırın:** `python3 -m vox_kit render <sahne.py>` hedef Python sahne dosyasını doğrudan çalıştırır — yalnızca kendinizin yazdığı veya güvendiğiniz `.py` sahnelerini çalıştırın.
 - **Sertleştirilmiş dosya yolları ve ffmpeg girişleri:** Harita önbelleği yol kaçışını (`..`) ve mutlak yolları reddeder; tüm medya yolları kanonik mutlak yola çözülür, loudnorm ölçümleri sonlu sayı olarak doğrulanır ve tüm alt süreç çağrıları kabuk yorumlayıcısı olmadan açık argüman listeleriyle çalışır.
+
+## Rehber ve Bağlantılar
+
+- **Detaylı Türkçe Rehber:** [xsphyrex.com/tr/rehberler/vox-belgesel-skill](https://xsphyrex.com/tr/rehberler/vox-belgesel-skill)
+- **English Guide & Benchmarks:** [xsphyrex.com/en/guides/vox-documentary-skill](https://xsphyrex.com/en/guides/vox-documentary-skill)
+- **Shorts Videosu:** [youtube.com/shorts/uM5m5pqkp_o](https://youtube.com/shorts/uM5m5pqkp_o)
 
 ## Lisans
 

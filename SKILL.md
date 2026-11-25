@@ -1,6 +1,11 @@
 ---
 name: sphyrex-vox-skill
 description: Produce Vox-style editorial paper-collage & engraved map documentaries (9:16 Shorts/Reels or 16:9 YouTube) from a script or topic using a deterministic Python rendering kit (Natural Earth maps, torn paper, outside-corner masking tape, worn red stamps, word-synced subtitles, procedural organic SFX, -14 LUFS loudnorm) plus optional 24fps zero-text AI hero clips. Compatible with Claude Code, OpenAI Codex CLI, and Google Antigravity.
+license: MIT
+metadata:
+  author: Sphyrex
+  homepage: https://xsphyrex.com/en/guides/vox-documentary-skill
+  version: "0.1.0"
 ---
 
 # Sphyrex Vox Skill (Hybrid Vox × Engraving v6)

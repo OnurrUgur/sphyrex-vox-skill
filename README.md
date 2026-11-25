@@ -1,8 +1,19 @@
 # sphyrex-vox-skill
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-2F8F6B.svg)](LICENSE)
+[![Python 3.9+](https://img.shields.io/badge/Python-3.9%2B-1A191D.svg)](#prerequisites)
+[![API Cost: $0](https://img.shields.io/badge/API%20Cost-%240-EBBA2C.svg)](#why-hybrid-75-deterministic-code--25-optional-ai)
+[![Agents: Claude · Codex · Antigravity](https://img.shields.io/badge/Agents-Claude%20%C2%B7%20Codex%20%C2%B7%20Antigravity-D02E2A.svg)](#step-2--connect-the-skill-to-your-ai-agent)
+
 **Open-source Agent Skill (Claude Code · OpenAI Codex · Google Antigravity) + deterministic Python engine (`vox_kit`) for producing Vox-style editorial paper-collage & engraved map documentaries (9:16 Shorts/Reels & 16:9 YouTube) with $0 API cost.**
 
-[Türkçe README →](README.tr.md) · [Skill Rules (`SKILL.md`)](SKILL.md) · [Agent Instructions (`AGENTS.md`)](AGENTS.md)
+[Full Guide & Benchmarks (xsphyrex.com) →](https://xsphyrex.com/en/guides/vox-documentary-skill) · [Türkçe Rehber](https://xsphyrex.com/tr/rehberler/vox-belgesel-skill) · [Türkçe README](README.tr.md) · [Skill Rules (`SKILL.md`)](SKILL.md) · [Agent Instructions (`AGENTS.md`)](AGENTS.md)
+
+<p align="center">
+  <img src="assets/demo-preview.gif" alt="sphyrex-vox-skill 24 FPS Python editorial documentary demo" width="720" />
+  <br />
+  <em>Rendered 100% deterministically in Python with <code>vox_kit</code> — Natural Earth 1:50m maps, torn paper cards, red rubber stamps, breakdown charts, horizontal black curtain &amp; -14 LUFS audio. $0 API cost, zero After Effects.</em>
+</p>
 
 > **Disclaimer:** This software is provided "as is", without warranty of any kind. You are solely responsible for verifying all facts, statistics, licensing of any third-party media you add, and compliance with platform policies. Sphyrex provides no hosted service and collects no telemetry or user data. The "Sphyrex" brand name and mascot artwork are not covered by the MIT license.
 
@@ -47,7 +58,16 @@ python3 -m unittest discover -s tests -v
 
 ## Step 2 · Connect the Skill to Your AI Agent
 
-`sphyrex-vox-skill` follows the standard `SKILL.md` + `AGENTS.md` format and works natively in **Claude Code**, **OpenAI Codex CLI**, and **Google Antigravity**. Run the command for your tool inside the cloned `sphyrex-vox-skill` directory:
+`sphyrex-vox-skill` follows the standard `SKILL.md` + `AGENTS.md` format and works natively in **Claude Code**, **OpenAI Codex CLI**, and **Google Antigravity**.
+
+### Quick Install (`skills.sh` CLI — All Agents)
+```bash
+npx skills add OnurrUgur/sphyrex-vox-skill
+```
+*(After installing the skill manifest, still run `pip install -e .` from Step 1 so `python3 -m vox_kit` is available in your Python environment.)*
+
+### Or Link Manually From Your Cloned Repo
+Run the command for your tool inside the cloned `sphyrex-vox-skill` directory:
 
 ### Claude Code
 ```bash
@@ -131,6 +151,12 @@ sphyrex-vox-skill/
 - **Local execution:** Designed to run offline with zero telemetry and zero required API keys.
 - **Trusted scenes only:** `python3 -m vox_kit render <scene.py>` executes the target Python scene file directly — only render `.py` scene scripts you wrote or trust.
 - **Hardened paths & ffmpeg inputs:** Cache paths reject traversal (`..`) and absolute escapes; ffmpeg inputs are resolved to canonical absolute paths and loudnorm measurements are strictly validated as finite floats; all subprocess calls use explicit argument arrays without shell invocation.
+
+## Guides & Links
+
+- **Full Architecture Guide & Benchmarks (EN):** [xsphyrex.com/en/guides/vox-documentary-skill](https://xsphyrex.com/en/guides/vox-documentary-skill)
+- **Detaylı Türkçe Rehber (TR):** [xsphyrex.com/tr/rehberler/vox-belgesel-skill](https://xsphyrex.com/tr/rehberler/vox-belgesel-skill)
+- **Video Walkthrough (YouTube Shorts):** [youtube.com/shorts/uM5m5pqkp_o](https://youtube.com/shorts/uM5m5pqkp_o)
 
 ## License
 
